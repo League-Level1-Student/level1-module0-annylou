@@ -3,6 +3,7 @@ package _01_methods._3_rain_game;
 import processing.core.PApplet;
 import processing.core.PImage;
 
+
 /*
  * Goal: Make a game where the user has to catch rain drops in a bucket!
  * 
@@ -50,8 +51,9 @@ public class RainGame extends PApplet {
     int bucketHeight;
     PImage bucket;
     int y;
-    int x;
-
+    int x = mouseX;
+    int rainY = 15;
+    int random = (int)random(width);
     // Sets the size of your canvas
     @Override
     public void settings() {
@@ -60,12 +62,22 @@ public class RainGame extends PApplet {
 
     @Override
     public void setup() {
-
+   
     }
 
     @Override
     public void draw() {
-
+    	background(198, 212, 223);
+    	fill(236, 255, 255);
+    	stroke(229, 253, 255);
+    	ellipse(random, rainY, 8, 20);
+    	rainY+=5;
+    	if(rainY>=600) {
+    		rainY-=600;
+    	}
+    	fill(143, 143, 143);
+    	noStroke();
+    	rect(mouseX, 583, 127, 17);
     }
 
     static public void main(String[] args) {
