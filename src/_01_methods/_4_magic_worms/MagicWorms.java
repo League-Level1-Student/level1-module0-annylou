@@ -1,6 +1,7 @@
 package _01_methods._4_magic_worms;
 
 import processing.core.PApplet;
+import java.util.Random;
 
 /*
  * Goal: Create a program that draws a magical pattern using worms!
@@ -30,9 +31,8 @@ import processing.core.PApplet;
  *    "red value", and i as the "green value" for some extra color coolness.
  */
 public class MagicWorms extends PApplet {
-    static final int WIDTH = 600;
-    static final int HEIGHT = 400;
-
+    static final int WIDTH = 1270;
+    static final int HEIGHT = 553;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
@@ -40,12 +40,22 @@ public class MagicWorms extends PApplet {
 
     @Override
     public void setup() {
-
+    	background(0,0,0);
     }
 
     @Override
     public void draw() {
-
+    	Random r = new Random();
+    	int y = 0;
+    	y = r.nextInt(553);
+    	Random m = new Random();
+    	int x = 0;
+    	x = m.nextInt(1270);
+    	
+    		fill(247,204,183);
+    		noStroke();
+    		ellipse(x, y, 5, 5);
+    	
     }
 
     static public void main(String[] args) {
