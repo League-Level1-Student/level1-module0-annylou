@@ -51,11 +51,10 @@ public class MagicWorms extends PApplet {
     	Random m = new Random();
     	int x = 0;
     	x = m.nextInt(1270);
-    	
     		fill(247,204,183);
     		noStroke();
-    		ellipse(x, y, 5, 5);
-    	
+    		ellipse(x, y, 10, 2);
+    		
     }
 
     static public void main(String[] args) {
