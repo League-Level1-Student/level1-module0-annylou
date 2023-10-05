@@ -13,6 +13,7 @@ public class FlappyBird extends PApplet {
     float uppery=random(100,529);
     int gap=127;
     float lowery=uppery+gap;
+    int score=0;
     @Override
     public void settings() {
         size(WIDTH, HEIGHT);
