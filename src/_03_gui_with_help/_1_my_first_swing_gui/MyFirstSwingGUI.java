@@ -31,9 +31,9 @@ public class MyFirstSwingGUI {
 		// 7. Set the text of the JLabel to a lovely greeting.
 		label.setText("hello");
 		// 8. Add the JPanel object to the JFrame
-		panel.add(frame);
+		frame.add(panel);
 		// 9. Add the JLabel object to the JPanel
-		label.add(panel);
+		panel.add(frame);
 		// 10. Pack your JFrame.
 		frame.pack();
 		// 11. Run your program again. Do you see your message.
