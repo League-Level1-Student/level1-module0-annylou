@@ -22,13 +22,13 @@ public class BodyPartQuiz {
 	// place them in the recipe package(body_part_quiz), and change the names below.
 
 	String firstImage = "src/_05_body_part_quiz/arnold.jpeg";
-	String secondImage = "src/_05_body_part_quiz/leonardo.jpeg";
-	String thirdImage = "src/_05_body_part_quiz/morgan.jpeg";
-	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
+	String secondImage = "src/_05_body_part_quiz/jack.jpeg";
+	String thirdImage = "src/_05_body_part_quiz/leonardo.jpeg";
+	String fourthImage = "src/_05_body_part_quiz/morgan.jpeg";
 
-	JFrame window = new JFrame();
+	JFrame frame = new JFrame();
 	JPanel panel = new JPanel();
-
+	
 	public void run() {
 		initializeGui();
 		startQuiz();
@@ -37,12 +37,12 @@ public class BodyPartQuiz {
 	private void initializeGui() {
 		initializeImageList();
 		imageIterator = imageList.iterator();
-		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		window.add(panel);
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		frame.add(panel);
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		frame.setSize(500, 500);
 
 		showNextImage();
 
@@ -51,31 +51,64 @@ public class BodyPartQuiz {
 	private void startQuiz() {
 
 		// 1. Make an int variable to hold the score.
-
+		int score = 0;
 		// 2. Set the size of the window in the initializeGui() method 
 
 		// 4. Ask the user who this person is and store their answer
-		String guess = JOptionPane.showInputDialog("who is this?");
-
+		String one = JOptionPane.showInputDialog("who is this?");
+		
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+		if(one.equals("arnold")) {
+			JOptionPane.showMessageDialog(null, "you're correct");
+			score++;
+		}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+		else {
+			JOptionPane.showMessageDialog(null, "no its arnold");
+		}
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
-
+		String two = JOptionPane.showInputDialog("who is this?");
+		if(two.equals("jack")) {
+			JOptionPane.showMessageDialog(null, "you're correct");
+			score++;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "no its jack");
+		}
+		showNextImage();
+		
+		String three = JOptionPane.showInputDialog("who is this?");
+		if(three.equals("leonardo")) {
+			JOptionPane.showMessageDialog(null, "you're correct");
+			score++;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "no its leonardo");
+		}
+		showNextImage();
+		
+		String four = JOptionPane.showInputDialog("who is this?");
+		if(four.equals("morgan")) {
+			JOptionPane.showMessageDialog(null, "you're correct");
+			score++;
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "no its morgan");
+		}
+		showNextImage();
 		// 9. Show them their current score
-
+		JOptionPane.showMessageDialog(null, "you got " +score +"/4");
 	}
 
 	public void showNextImage() {
 		panel.removeAll();
 		panel.add(getNextImage());
-		window.setVisible(true);
+		frame.setVisible(true);
 	}
 
 	private JLabel loadImage(String fileName) {
