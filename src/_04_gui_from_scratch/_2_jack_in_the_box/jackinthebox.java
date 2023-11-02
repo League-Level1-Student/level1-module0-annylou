@@ -11,7 +11,6 @@ import java.net.URL;
 
 public class jackinthebox {
 	public void box() {
-		JFrame frame = new JFrame();
 		JButton button = new JButton();
 		button.setText("suprise");
 	}
@@ -43,5 +42,6 @@ public class jackinthebox {
 	          return new JLabel();
 	     }
 	}
+	
 	
 }

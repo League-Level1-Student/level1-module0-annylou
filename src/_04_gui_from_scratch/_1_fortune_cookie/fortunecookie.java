@@ -23,7 +23,7 @@ public class fortunecookie {
 			JOptionPane.showMessageDialog(null, "you're a mall santa");
 		}
 		else if(random==2) {
-			JOptionPane.showMessageDialog(null, "that one bee from the bee movie");
+			JOptionPane.showMessageDialog(null, "you're that one bee from the bee movie");
 		}
 		else if(random==3) {
 			JOptionPane.showMessageDialog(null, "you look like a frog");
